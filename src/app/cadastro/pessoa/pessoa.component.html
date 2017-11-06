@@ -8,3 +8,57 @@
     </p>
   </div>
 </section>
+<section>
+  <div class="container">
+    <div class="columns">
+        <div class="column">
+          <form [formGroup]="cadastroPessoaForm" novalidate>
+            <div class="field">
+              <p class="control">
+                <input class="input" formControlName="nome" type="text" placeholder="Nome">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input class="input" formControlName="sobrenome" type="text" placeholder="Sobrenome">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <button (click)="submit(cadastroPessoaForm.value)" class="button">
+                  Cadastrar
+                </button>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Pessoas Cadastradas
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <table class="table is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Sobrenome</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let pessoa of pessoas">
+                      <td>{{pessoa.nome}}</td>
+                      <td>{{pessoa.sobrenome}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
