@@ -8,8 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## UI Depedencies
 
-[Font Awesome](http://fontawesome.io/icons/)
-[Bulma CSS](https://bulma.io/documentation/overview/start/)
+- [Font Awesome](http://fontawesome.io/icons/) - Versão 4.7.0
+- [Bulma CSS](https://bulma.io/documentation/overview/start/) - Versão 0.6.0
 
 ## Development server
 

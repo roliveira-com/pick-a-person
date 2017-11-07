@@ -1,0 +1,19 @@
+<form [formGroup]="cadastroPessoaForm" novalidate>
+  <div class="field">
+    <p class="control">
+      <input class="input" formControlName="nome" type="text" placeholder="Nome">
+    </p>
+  </div>
+  <div class="field">
+    <p class="control">
+      <input class="input" formControlName="sobrenome" type="text" placeholder="Sobrenome">
+    </p>
+  </div>
+  <div class="field">
+    <p class="control">
+      <button (click)="submit(cadastroPessoaForm.value)" class="button">
+        Cadastrar
+      </button>
+    </p>
+  </div>
+</form>

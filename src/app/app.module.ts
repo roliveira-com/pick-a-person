@@ -1,22 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { FirebaseConfigs } from './../environments/firebase.config';
 import { AngularFireModule } from 'angularfire2/index';
 
+import { CadastroModule } from './cadastro/cadastro.module';
+
 import { AppComponent } from './app.component';
-import { PessoaComponent } from './cadastro/pessoa/pessoa.component';
+//import { PessoaComponent } from './cadastro/pessoa/pessoa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PessoaComponent,
+    // PessoaComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
+    CadastroModule,
+    HttpClientModule,
+    //FormsModule,
+    //ReactiveFormsModule,
     AngularFireModule.initializeApp(FirebaseConfigs)
   ],
   providers: [],

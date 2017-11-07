@@ -1,0 +1,31 @@
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Pessoas Cadastradas
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pessoa of pessoas | async">
+            <td (click)="log(pessoa.$key)">{{pessoa.id}}</td>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.sobrenome}}</td>
+            <td>
+              <button (click)="remover(pessoa.id)" class="button is-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

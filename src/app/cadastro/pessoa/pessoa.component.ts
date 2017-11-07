@@ -10,22 +10,10 @@ import { Pessoa } from './pessoa.model';
 })
 export class PessoaComponent implements OnInit {
 
-  pessoas: Array<Pessoa> = [];
-  cadastroPessoaForm: FormGroup;
-
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit() {
-    this.cadastroPessoaForm = this.fb.group({
-      nome: this.fb.control('', [Validators.required, Validators.minLength(5)]),
-      sobrenome: this.fb.control('', [Validators.required])
-    });
-  }
 
-  submit(pessoa: Pessoa) {
-    // console.log(pessoa);
-    this.pessoas.push(pessoa);
-    // console.log(this.cadastroPessoaForm.value.nome);
   }
 
 }
