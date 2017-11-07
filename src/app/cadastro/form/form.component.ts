@@ -29,18 +29,19 @@ export class FormComponent implements OnInit {
   }
 
   submit(pessoa: Pessoa) {
-    this.firebase.list('pessoas').push({
-      nome: pessoa.nome,
-      sobrenome: pessoa.sobrenome
-    }).then(
-      (t: any) => {
-        this.firebase.list('pessoas').update(t.key,{
-          id: t.key
-        })
-        console.log(`Dados Gravados: ${t.key}`);
-      }),
-    (e: any) => console.log(e.message);
-    this.cadastroPessoaForm.reset(' ');
+    // Pegando a key que será usada para salvar este dado
+    // para armazená-la junto com o objeto.
+    // Espero que isso seja provisório já que não sei como
+    // obter a pririedade $key que vem na no momento que 
+    // listamos estes dados
+    // Lembrar que, o metodo push() tambem retorna uma promise
+    // com a propriedade key do item que foi adicionado. Tipo isso:
+    // this.firebase.list('pessoas').push({item}).then(reponse => console.log(response.key))
+    pessoa.id = this.firebase.list('pessoas').push(null).key;
+    this.firebase.list('pessoas').update(pessoa.id, pessoa)
+      .then(() => console.log(`Dados Gravados: ${pessoa.id}`))
+      .catch(erro => console.log(erro.message));
+    this.cadastroPessoaForm.reset();
   }
 
 }

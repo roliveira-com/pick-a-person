@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList, AngularFireAction, DatabaseSnapshot } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
 import {Pessoa} from '../pessoa/pessoa.model';
@@ -29,7 +29,12 @@ export class ListaComponent implements OnInit {
   }
 
   remover(key: string){
-    this.pessoasRef.remove(key);
+    if(key !== undefined){
+      this.pessoasRef.remove(key);
+      console.log(key);
+    }else{
+      console.log('Item não removido! Key não encontrada');
+    }
   }
 
 }
