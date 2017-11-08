@@ -7,6 +7,8 @@ import { FirebaseConfigs } from './../environments/firebase.config';
 import { AngularFireModule } from 'angularfire2/index';
 
 import { CadastroModule } from './cadastro/cadastro.module';
+import { LoginModule } from './login/login.module';
+import { RouteModule } from './route/route.module'
 
 import { AppComponent } from './app.component';
 //import { PessoaComponent } from './cadastro/pessoa/pessoa.component';
@@ -19,7 +21,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CadastroModule,
+    LoginModule,
     HttpClientModule,
+    RouteModule,
     //FormsModule,
     //ReactiveFormsModule,
     AngularFireModule.initializeApp(FirebaseConfigs)
