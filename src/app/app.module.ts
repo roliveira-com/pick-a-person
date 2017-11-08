@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { FirebaseConfigs } from './../environments/firebase.config';
@@ -8,10 +7,9 @@ import { AngularFireModule } from 'angularfire2/index';
 
 import { CadastroModule } from './cadastro/cadastro.module';
 import { LoginModule } from './login/login.module';
-import { RouteModule } from './route/route.module'
+import { AppRouteModule } from './route/route.module';
 
 import { AppComponent } from './app.component';
-//import { PessoaComponent } from './cadastro/pessoa/pessoa.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +21,7 @@ import { AppComponent } from './app.component';
     CadastroModule,
     LoginModule,
     HttpClientModule,
-    RouteModule,
-    //FormsModule,
-    //ReactiveFormsModule,
+    AppRouteModule,
     AngularFireModule.initializeApp(FirebaseConfigs)
   ],
   providers: [],

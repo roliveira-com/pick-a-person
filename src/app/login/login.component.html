@@ -1,3 +1,39 @@
-<p>
-  login works!
-</p>
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      Pick a Person
+    </h1>
+    <p class="subtitle">
+      Login
+    </p>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <form [formGroup]="loginForm" novalidate>
+          <div class="field">
+            <p class="control">
+              <input class="input" formControlName="user" type="text" placeholder="Usuário">
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <input class="input" formControlName="pass" type="password" placeholder="Senha">
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <button (click)="login(loginForm.value)" class="button">
+                Login
+              </button>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="column">
+      </div>
+    </div>
+  </div>
+</section>

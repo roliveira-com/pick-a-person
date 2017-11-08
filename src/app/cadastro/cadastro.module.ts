@@ -11,7 +11,7 @@ import { ListaComponent } from './lista/lista.component';
 
 const ROUTES: Routes = [
   { path: '', component: PessoaComponent}
-]
+];
 
 @NgModule({
   imports: [
