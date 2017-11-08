@@ -15,6 +15,8 @@ export class ListaComponent implements OnInit {
   pessoasRef: AngularFireList<Pessoa>;
   pessoas: Observable<Pessoa[]>;
 
+  people: AngularFireAction<DatabaseSnapshot>[];
+
   constructor(private database: AngularFireDatabase) { 
     this.pessoasRef = database.list('pessoas');
     this.pessoas = this.pessoasRef.valueChanges();
@@ -28,12 +30,10 @@ export class ListaComponent implements OnInit {
     console.log(key);
   }
 
-  remover(key: string){
-    if(key !== undefined){
-      this.pessoasRef.remove(key);
-      console.log(key);
-    }else{
-      console.log('Item não removido! Key não encontrada');
+  remover(pessoa: Pessoa){
+    const message = `Deseja mesmo remover ${pessoa.nome} ${pessoa.sobrenome} ?`;
+    if (window.confirm(message)){
+      this.pessoasRef.remove(pessoa.id);
     }
   }
 

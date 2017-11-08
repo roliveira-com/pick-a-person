@@ -17,11 +17,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let pessoa of pessoas | async">
-            <td (click)="log(pessoa.$key)">{{pessoa.id}}</td>
+            <td (click)="log(pessoa.id)">{{pessoa.id}}</td>
             <td>{{pessoa.nome}}</td>
             <td>{{pessoa.sobrenome}}</td>
             <td>
-              <button (click)="remover(pessoa.id)" class="button is-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+              <button (click)="remover(pessoa)" class="button is-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
             </td>
           </tr>
         </tbody>

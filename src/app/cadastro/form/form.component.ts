@@ -12,7 +12,6 @@ import { Pessoa } from '../pessoa/pessoa.model';
 })
 export class FormComponent implements OnInit {
 
-  //pessoas: Array<Pessoa> = [];
   cadastroPessoaForm: FormGroup;
   pessoasRef: AngularFireList<Pessoa>;
 
@@ -31,9 +30,6 @@ export class FormComponent implements OnInit {
   submit(pessoa: Pessoa) {
     // Pegando a key que será usada para salvar este dado
     // para armazená-la junto com o objeto.
-    // Espero que isso seja provisório já que não sei como
-    // obter a pririedade $key que vem na no momento que 
-    // listamos estes dados
     // Lembrar que, o metodo push() tambem retorna uma promise
     // com a propriedade key do item que foi adicionado. Tipo isso:
     // this.firebase.list('pessoas').push({item}).then(reponse => console.log(response.key))
