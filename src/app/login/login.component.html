@@ -25,10 +25,15 @@
           </div>
           <div class="field">
             <p class="control">
-              <button (click)="login(loginForm.value)" class="button">
+              <button (click)="login(loginForm.value.user, loginForm.value.pass)" class="button">
                 Login
               </button>
             </p>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button (click)="logout()" class="button is-text">logout</button>              
+            </div>
           </div>
         </form>
       </div>

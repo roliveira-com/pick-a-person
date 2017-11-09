@@ -15,6 +15,7 @@ import { LoginComponent } from './login.component';
   declarations: [
     LoginComponent
   ],
+  providers: [AngularFireAuth],
   exports: [
     LoginComponent
   ]

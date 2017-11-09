@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { FirebaseConfigs } from './../environments/firebase.config';
 import { AngularFireModule } from 'angularfire2/index';
+
+import { ServicesModules } from './services/services.module';
 
 import { CadastroModule } from './cadastro/cadastro.module';
 import { LoginModule } from './login/login.module';
@@ -20,7 +21,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CadastroModule,
     LoginModule,
-    HttpClientModule,
+    ServicesModules,
     AppRouteModule,
     AngularFireModule.initializeApp(FirebaseConfigs)
   ],
