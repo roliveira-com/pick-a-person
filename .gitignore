@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Arquivos fontes de imagens e logos (.psd, .ai, etc)
+/sources
+/resources
+
 # compiled output
 /dist
 /tmp
