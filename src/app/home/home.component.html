@@ -1,0 +1,55 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="assets/logos/pickaperson_logo_navbar.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" [routerLink]="['login']">
+            Login/Nome do Usuário
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" [routerLink]="['login']">
+              Login
+            </a>
+            <a class="navbar-item" [routerLink]="['cadastro']">
+              Meus Cadastros
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="#">
+              Logout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Picka a Person
+      </h1>
+      <h2 class="subtitle">
+        Register, See, Edit
+      </h2>
+    </div>
+  </div>
+</section>
+
+<cadastro-pessoa></cadastro-pessoa>

@@ -11,10 +11,12 @@ import { LoginModule } from './login/login.module';
 import { AppRouteModule } from './route/route.module';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     // PessoaComponent,
   ],
   imports: [
