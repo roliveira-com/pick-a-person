@@ -10,6 +10,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - [Font Awesome](http://fontawesome.io/icons/) - Versão 4.7.0
 - [Bulma CSS](https://bulma.io/documentation/overview/start/) - Versão 0.6.0
+- [Flaticon](https://www.flaticon.com)
+
+## JS Dependencies
+
+- [Firebase  Javascript SDK](https://github.com/firebase/firebase-js-sdk) - Versão 4.6.1
+- [AngularFire 2](https://github.com/angular/angularfire2/tree/5.0.0-rc.2) - Versão 5.0.0-RC2
 
 ## Development server
 
