@@ -9,9 +9,15 @@ import {AngularFireAuth} from 'angularfire2/auth';
 @Injectable()
 export class LoginService {
 
-  user: any;
+  logged: any = null;
 
-  constructor(private firebaseAuth: AngularFireAuth){}
+  constructor(private firebaseAuth: AngularFireAuth){
+    
+    this.firebaseAuth.authState.subscribe((user) => {
+      this.logged = user;
+    })
+
+  }
 
   login(user: string, pass: string) {
     this.firebaseAuth.auth.signInWithEmailAndPassword(user, pass)
@@ -23,11 +29,7 @@ export class LoginService {
     this.firebaseAuth.auth.signOut();
   }
 
-  // @ToDo
-  // Trabalhar melhor neste médodo de chacagem de usuario autenticado.
-  // Neste momento a propriedade user não altera de acordo com a autenticação
-  // do usuário
-  isLogged() {
-    this.firebaseAuth.authState.subscribe(user => this.user = user);
+  isLogged(): boolean {
+    return this.logged !== null;
   }
 }

@@ -32,4 +32,8 @@ export class LoginComponent implements OnInit {
     this.auth.logout();
   }
 
+  logged(): boolean{
+    return this.auth.isLogged()
+  }
+
 }
