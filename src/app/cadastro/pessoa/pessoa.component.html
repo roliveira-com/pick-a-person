@@ -1,19 +1,40 @@
 <section class="section">
   <div class="container">
-    <h1 class="title">
-      Pick a Person
-    </h1>
-    <p class="subtitle">
-      Cadastro de pessoa
-    </p>
+
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <div class="field has-addons">
+            <p class="control">
+              <input class="input" type="text" placeholder="busque pelo nome">
+            </p>
+            <p class="control">
+              <button class="button is-dark">
+                Buscar
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="level-right">
+        <p class="level-item">
+          <a class="button is-warning"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Novo Cadastro</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="hero is-light">
+      <div class="hero-body">
+        <pessoa-cadastro-form></pessoa-cadastro-form>
+      </div>
+    </div>
   </div>
 </section>
+
 <section>
   <div class="container">
     <div class="columns">
-      <div class="column">
-        <pessoa-cadastro-form></pessoa-cadastro-form>
-      </div>
       <div class="column">
         <cadastro-pessoa-lista></cadastro-pessoa-lista>
       </div>
