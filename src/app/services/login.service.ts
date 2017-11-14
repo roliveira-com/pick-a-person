@@ -32,4 +32,8 @@ export class LoginService {
   isLogged(): boolean {
     return this.logged !== null;
   }
+
+  loggedUser(){
+    return this.logged;
+  }
 }

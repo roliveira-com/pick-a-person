@@ -17,14 +17,14 @@
         </div>
       </div>
     
-      <div class="level-right">
+      <div class="level-right" *ngIf="logged()">
         <p class="level-item">
-          <a class="button is-warning"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Novo Cadastro</a>
+          <button (click)="showBox(formBox)" class="button is-warning"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Novo Cadastro</button>
         </p>
       </div>
     </div>
 
-    <div class="hero is-light">
+    <div class="hero is-light collapsed" #formBox>
       <div class="hero-body">
         <pessoa-cadastro-form></pessoa-cadastro-form>
       </div>

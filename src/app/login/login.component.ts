@@ -11,6 +11,7 @@ import { LoginService } from '../services/login.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  currentUser: any;
 
   constructor(
     private form: FormBuilder,
@@ -34,6 +35,10 @@ export class LoginComponent implements OnInit {
 
   logged(): boolean{
     return this.auth.isLogged()
+  }
+
+  loggedUser(){
+    this.currentUser = this.auth.loggedUser();
   }
 
 }
