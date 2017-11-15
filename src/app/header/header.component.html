@@ -17,19 +17,18 @@
       </div>
 
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" [routerLink]="['login']">
-            Login/Nome do Usuário
+        <a [routerLink]="['login']" *ngIf="!authorized" class="navbar-link">Login</a>
+
+        <div *ngIf="authorized" class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            {{currentUser.displayName || currentUser.email}}
           </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" [routerLink]="['login']">
-              Login
-            </a>
             <a class="navbar-item" [routerLink]="['cadastro']">
-              Meus Cadastros
+              Cadastros
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" (click)="logout()">
               Logout
             </a>
           </div>

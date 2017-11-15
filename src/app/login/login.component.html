@@ -10,7 +10,26 @@
   <div class="container">
     <div class="columns">
       <div class="column">
-        <p *ngIf="logged()">Já esta logado(a) | <button (click)="logout()" class="button is-link">deslogar</button></p>
+        <div class="hero is-warning" *ngIf="logged()">
+          <div class="hero-body">
+            <p>Já esta logado(a) |
+              <a (click)="logout()" class="is-text">deslogar</a>
+            </p>
+            <p>&nbsp;</p>
+            <form [formGroup]="displayNameForm" novalidate>
+              <div class="field has-addons">
+                <p class="control">
+                  <input class="input" formControlName="displayName" type="text" placeholder="Novo Apelido">
+                </p>
+                <p class="control">
+                  <button (click)="updateUserProfile(displayNameForm.value.displayName)" class="button is-dark">
+                    Salvar
+                  </button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
         <form *ngIf="!logged()" [formGroup]="loginForm" novalidate>
           <div class="field">
             <p class="control">
