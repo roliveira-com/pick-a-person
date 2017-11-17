@@ -6,11 +6,11 @@ Desenvolvido com base na série de artigos da [Evelyn Mendes](https://github.com
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 
-## UI Depedencies
+## UI Depedencies and sources
 
 - [Font Awesome](http://fontawesome.io/icons/) - Versão 4.7.0
 - [Bulma CSS](https://bulma.io/documentation/overview/start/) - Versão 0.6.0
-- [Flaticon](https://www.flaticon.com)
+- [Flaticon Interface Package](https://www.flaticon.com/packs/interface)
 
 ## JS Dependencies
 
