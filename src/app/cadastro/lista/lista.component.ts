@@ -4,11 +4,15 @@ import { AngularFireDatabase, AngularFireList, AngularFireAction, DatabaseSnapsh
 import { Observable } from 'rxjs/Observable';
 
 import {Pessoa} from '../pessoa/pessoa.model';
+import {ItemEnterTrigger} from './animation'
 
 @Component({
   selector: 'cadastro-pessoa-lista',
   templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.css']
+  styleUrls: ['./lista.component.css'],
+  animations: [
+    ItemEnterTrigger
+  ]
 })
 export class ListaComponent implements OnInit {
 

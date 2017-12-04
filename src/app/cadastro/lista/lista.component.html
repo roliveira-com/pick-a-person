@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let pessoa of pessoas | async">
+          <tr *ngFor="let pessoa of pessoas | async" @itemEnter>
             <td (click)="log(pessoa.id)">{{pessoa.id}}</td>
             <td>{{pessoa.nome}}</td>
             <td>{{pessoa.sobrenome}}</td>
